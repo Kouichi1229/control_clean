@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 from io import  StringIO
-from strsimpy.jaro_winkler import JaroWinkler
+#from strsimpy.jaro_winkler import JaroWinkler
 from action import *
 from TAKE_OUT_TYPE import *
 import time
