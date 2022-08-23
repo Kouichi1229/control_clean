@@ -294,7 +294,7 @@ else:
             options = st.multiselect(
         '選擇資料處理項目',
             select_contorl,
-            ['去除Corp類型', '去除Ltd類型', '去除LLC類型','去除THE、AND、OF','去除錯字(company、corp、kabusiki kaisha...)']
+            ['去除Corp類型', '去除Ltd類型', '去除LLC類型','去除THE、AND、OF','去除錯字(company、corp、kabusiki kaisha...)','去除有限合夥類型(gmbh & co. kg,Lp)','轉譯字符(&amp;)']
         )
 
         time.sleep(5)
