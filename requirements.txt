@@ -10,3 +10,4 @@ seaborn
 strsimpy
 Unidecode
 pyxlsb
+xlsxwriter
