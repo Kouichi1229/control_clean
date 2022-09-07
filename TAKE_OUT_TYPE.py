@@ -28,7 +28,7 @@ LP=['GMBH','&','CO.','KG','LP','L.P.',
  'E.E.','S.A.S.','C.V.','S.K.A.',
  'SP.K.','S.CRA.','KY','SCS','KG',
  'KD','K/S','EE','SECS','KDA','KS',
- 'KB','KT']
+ 'KB','KT','MIT',' BESCHRAENKTER','HAFTUNG','BESCHRÄNKTER']
 
 PTE=['PRIVATE', 'PTE', 'XK']
 
