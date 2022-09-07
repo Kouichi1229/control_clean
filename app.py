@@ -224,7 +224,7 @@ if upload_type == 'Csv':
                 
                 #t = time.time() - startTime
 
-                st.write(df[[option_df,'AC']])
+                st.write(df[[option_df,option_df+'_Clean']])
             
 
                 st.balloons()
