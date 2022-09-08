@@ -46,7 +46,7 @@ if upload_type == 'Csv':
 
 
         #st.dataframe(df_count)
-
+        df[option_df]=df[option_df].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
 
         genre = st.radio(
         "逗號切割，留下逗號前的字串[0]",
@@ -262,10 +262,10 @@ else:
         df_count=pd.read_csv('TEMP.csv',encoding='utf-8-sig')
         df_count=df_count.sort_values('NUM',ascending=False)
 
-
+        df[option_df]=df[option_df].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
         
 
-
+     
         genre = st.radio(
         "逗號切割，留下逗號前的字串[0]",
         ('YES', 'NO'))
