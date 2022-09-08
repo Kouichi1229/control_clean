@@ -46,7 +46,7 @@ if upload_type == 'Csv':
 
 
         #st.dataframe(df_count)
-        df[option_df]=df[option_df].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+        df[option_df]=df[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
 
         genre = st.radio(
         "逗號切割，留下逗號前的字串[0]",
