@@ -1,4 +1,4 @@
-NON_MEAN_WORDS=["THE","AND","OF",'LE','LA','LES','DE']
+NON_MEAN_WORDS=["THE","AND","OF",'LE','LA','LES','DE','AT','FOR']
 
 CORP=['COMPANY','COMPANY,','INCORPORATED','CORPORATION','CORP.','CORP','INC',
  'INC.','S.P.A.','N.V.','A.G.','AG','NUF','S.A.','S.F.','OAO','CO.',
@@ -33,6 +33,16 @@ LP=['GMBH','&','CO.','KG','LP','L.P.',
 PTE=['PRIVATE', 'PTE', 'XK']
 
 PLLC=['PLLC', 'P.L.L.C.']
+
+ORG_UNIT=['GOVERMMENT','UNIVERSITY','UNIV','UNIVERSITE','SCH','SCHOOL','GRP','GROUP','FDN','FOUNDATION',
+'ASSOC','ASSOCIATION','ORG','ORGANIZATION','CTR','CENTER','OBSERV','OBSERVATORY','INST','INSTITUTE',
+'COLLEGE','COLL','HOST','HOSPITAL','NATIONAL','NAIL','LAB','LABORATORY','RESEARCH','DEPARTMENT']
+
+INVENTER_NAME_CLEAN=['DR','DE','DA','DI','MC','VON','DER','VAN', 'DEN']
+
+COUNTRY=['US','UNITED','STATE','CHINA','GERMANY','CHINA MAINLAND','FRANCE','JAPAN','ITALY',
+'SPAIN','CANADA','KINGDOM','UK','AUSTRALIA','NETHERLANDS','SWITZERLAND','SAUDI ARABIA','AUSTRIA',
+'SWISS','DENMARK','TAIWAN','BELGIUM','FINLAND','INDIA','SINGAPORE','SWEDEN','NORWAY']
 
 WRONG_WORDS_CROP=['COPORATION','CORPORATON','COROPORATION','CORPORTAION','CORPORAION',
 'CORPORTION','CORPORATI','CORPOTRATION','CORPORATIION','CORPROATION',"CROP",
@@ -112,3 +122,23 @@ def WRONG_WORDS_ALL():
     WRONG_WORDS_ALL.append(WRONG_WORDS_LLC)
     WRONG_WORDS_ALL=sum(WRONG_WORDS_ALL,[])
     return WRONG_WORDS_ALL
+
+
+replace_words_dicts={
+'Lin' :'Linear', 
+'Accel' : 'Accelerator',
+'Bioinformat' : 'Bioinformatics', 
+'Inst' : 'Institute', 
+'Neurosci':'Neuroscience',
+'Med': 'Medical',
+'Assoc':'Association',
+'Metr':'Metrics', 
+'Evaluat':'Evalua',
+'Ist':'Istituto',
+'Acc':'Accelerator',
+'Observ':'Observatory',
+'Grad':'Graduate',
+'Mt':'Mount',
+'Econ':'Economics',
+'Nutr':'Nutrition',
+}

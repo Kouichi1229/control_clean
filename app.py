@@ -106,6 +106,13 @@ if upload_type == 'Csv':
                 TAKE_OUT_WORDS.append(PLLC)
             if i=='轉譯字符(&amp;)':
                 TAKE_OUT_WORDS.append(OTHERS)
+            if i =='去除機構單位(GOVERMMENT、UNIVERSITY、SCHOOL、GROUP、FOUNDATION....)':
+                TAKE_OUT_WORDS.append(ORG_UNIT)
+            if i =='發明人名字清洗':
+                TAKE_OUT_WORDS.append(INVENTER_NAME_CLEAN)
+            if i=='去除國家':
+                TAKE_OUT_WORDS.append(COUNTRY)
+
         
         time.sleep(5)
 
@@ -323,6 +330,12 @@ else:
                 TAKE_OUT_WORDS.append(PLLC)
             if i =='轉譯字符(&amp;)':
                 TAKE_OUT_WORDS.append(OTHERS)
+            if i =='去除機構單位(GOVERMMENT、UNIVERSITY、SCHOOL、GROUP、FOUNDATION....)':
+                TAKE_OUT_WORDS.append(ORG_UNIT)
+            if i =='發明人名字清洗':
+                TAKE_OUT_WORDS.append(INVENTER_NAME_CLEAN)
+            if i=='去除國家':
+                TAKE_OUT_WORDS.append(COUNTRY)
 
         TAKE_OUT_WORDS=sum(TAKE_OUT_WORDS,[])
 
@@ -448,12 +461,12 @@ else:
                 
                 #df=df[[option_df,'AC']]
 
-                df.to_excel("CompareTemp.xlsx")
-                excel =to_excel(df)
-                st.download_button(
-                    label="下載 EXCEL",
-                    data=excel,
-                    file_name='權控清洗結果'+now+'.xlsx'
-                    )
+                # df.to_excel("CompareTemp.xlsx")
+                # excel =to_excel(df)
+                # st.download_button(
+                #     label="下載 EXCEL",
+                #     data=excel,
+                #     file_name='權控清洗結果'+now+'.xlsx'
+                #     )
 
                 st.success('清洗完成，請下載')

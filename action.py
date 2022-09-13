@@ -31,4 +31,5 @@ def to_excel(df):
 
 
 SELECT_CONTORLS=['去除Corp類型', '去除Ltd類型', '去除LLC類型','去除THE、AND、OF','去除有限合夥類型(gmbh & co. kg,Lp)',
-            '去除錯字(company、corp、kabusiki kaisha...)','去除Llp','去除Lllp類型','去除Pte類型','去除Pllc類型','轉譯字符(&amp;)']
+            '去除錯字(company、corp、kabusiki kaisha...)','去除Llp','去除Lllp類型','去除Pte類型','去除Pllc類型','轉譯字符(&amp;)',
+            '去除機構單位(GOVERMMENT、UNIVERSITY、SCHOOL、GROUP、FOUNDATION....)','去除國家','發明人名字清洗']
