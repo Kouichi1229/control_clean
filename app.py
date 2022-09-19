@@ -459,14 +459,14 @@ else:
                 time.sleep(1)
                 
                 
-                #df=df[[option_df,'AC']]
+                df=df[[option_df,'AC']]
 
-                # df.to_excel("CompareTemp.xlsx")
-                # excel =to_excel(df)
-                # st.download_button(
-                #     label="下載 EXCEL",
-                #     data=excel,
-                #     file_name='權控清洗結果'+now+'.xlsx'
-                #     )
+                df.to_excel("CompareTemp.xlsx")
+                excel =to_excel(df)
+                st.download_button(
+                     label="下載 EXCEL",
+                     data=excel,
+                     file_name='權控清洗結果'+now+'.xlsx'
+                     )
 
                 st.success('清洗完成，請下載')
