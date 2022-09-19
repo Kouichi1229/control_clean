@@ -459,7 +459,6 @@ else:
                 time.sleep(1)
                 
                 
-                df=df[[option_df,'AC']]
 
                 df.to_excel("CompareTemp.xlsx")
                 excel =to_excel(df)
