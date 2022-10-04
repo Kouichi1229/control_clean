@@ -1,16 +1,15 @@
 import pandas as pd
 import streamlit as st
 from io import  StringIO
-#from strsimpy.jaro_winkler import JaroWinkler
 from action import *
 from TAKE_OUT_TYPE import *
 import time
 from datetime import datetime
 
+
+st.title('Pris 清洗程式工具 By IchiWang')
 now = datetime.now().strftime('%Y%m%d%H%M')
 
-
-#jarowinkler = JaroWinkler()
 endcoding = 'utf-8-sig'
 
 
@@ -217,7 +216,7 @@ if upload_type == 'Csv':
             startTime = time.time()
             df_count=df_count.drop_duplicates(subset=['Regex'], keep='first')
             #st.write(df_count)
-            with st.spinner('比對中請稍後...'):
+            with st.spinner('清洗中請稍後...'):
                 
                 dict_db = dict(zip(df_count['Regex'],df_count[option_df]))
                 df[option_df+'_Clean'] = df['Regex'].map(dict_db)
