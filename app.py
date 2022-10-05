@@ -10,7 +10,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 sys.stdin.reconfigure(encoding='utf-8')
 
 st.title('Pris 清洗程式工具')
-st..subheader('By IchiWang')
+st.subheader('By IchiWang')
 now = datetime.now().strftime('%Y%m%d%H%M')
 
 endcoding = 'utf-8-sig'
