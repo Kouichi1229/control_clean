@@ -11,3 +11,4 @@ strsimpy
 Unidecode
 pyxlsb
 xlsxwriter
+python == 3.9.5
