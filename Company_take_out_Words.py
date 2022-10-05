@@ -1,3 +1,7 @@
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stdin.reconfigure(encoding='utf-8')
+
 Corporation=['company', 'incorporated', 'corporation', 'corp.', 'corp', 'inc',
       '& co.', '& co', 'inc.', 's.p.a.', 'n.v.', 'a.g.', 'ag', 'nuf', 's.a.', 's.f.',
       'oao', 'co.', 'co','kabushiki kaisha','kk','k.k.','k.k'
