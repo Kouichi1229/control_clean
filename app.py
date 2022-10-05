@@ -343,6 +343,16 @@ else:
 
         st.sidebar.write(TAKE_OUT_WORDS)
 
+        if len(df[df['Regex']==''])>0:
+          list_index_DF=df[df['Regex']==''].index.tolist()
+          for i in range(0,len(list_index_DF)):
+               df['Regex'][list_index_DF[i]]=df[option_df].iloc[list_index_DF[i]]
+
+        if len(df_count[df_count['Regex']==''])>0:
+            list_index_DF=df_count[df_count['Regex']==''].index.tolist()
+            for i in range(0,len(list_index_DF)):
+                df_count['Regex'][list_index_DF[i]]=df_count[option_df].iloc[list_index_DF[i]]
+          
         df['Regex']=df['Regex'].apply(lambda x:' '.join(word.upper() for word in x.split() if word not in TAKE_OUT_WORDS))
         df['Regex']=df['Regex'].apply(lambda x:' '.join(word.upper() for word in x.split() if word not in TAKE_OUT_WORDS))
         
