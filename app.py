@@ -13,7 +13,7 @@ st.title('Pris 清洗程式工具')
 st.subheader('By IchiWang')
 now = datetime.now().strftime('%Y%m%d%H%M')
 
-endcoding = 'utf-8-sig'
+endcoding = 'utf-8'
 
 
 upload_type= st.radio(
@@ -42,13 +42,13 @@ if upload_type == 'Csv':
         #將讀進來的資料統計
         df_count=df.groupby([option_df],sort=False)[option_df].count()
         df_count=df_count.to_frame(name='NUM')
-        df_count.to_csv('TEMP.csv',encoding='utf-8-sig')
-        df_count=pd.read_csv('TEMP.csv',encoding='utf-8-sig')
+        df_count.to_csv('TEMP.csv',encoding=endcoding)
+        df_count=pd.read_csv('TEMP.csv',encoding=endcoding)
         df_count=df_count.sort_values('NUM',ascending=False)
 
 
         #st.dataframe(df_count)
-        df[option_df]=df[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').decode("latin1")
+        df[option_df]=df[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
 
         genre = st.radio(
         "逗號切割，留下逗號前的字串[0]",
@@ -267,11 +267,11 @@ else:
         #將讀進來的資料統計
         df_count=df.groupby([option_df],sort=False)[option_df].count()
         df_count=df_count.to_frame(name='NUM')
-        df_count.to_csv('TEMP.csv',encoding='utf-8-sig')
-        df_count=pd.read_csv('TEMP.csv',encoding='utf-8-sig')
+        df_count.to_csv('TEMP.csv',encoding=endcoding)
+        df_count=pd.read_csv('TEMP.csv',encoding=endcoding)
         df_count=df_count.sort_values('NUM',ascending=False)
 
-        df[option_df]=df[option_df].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+        df[option_df]=df[option_df].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
         
 
      
