@@ -12,8 +12,8 @@ sys.stdin.reconfigure(encoding='utf-8')
 st.title('Pris 清洗程式工具')
 st.subheader('By IchiWang')
 now = datetime.now().strftime('%Y%m%d%H%M')
-
-endcoding = 'utf-8'
+#.encode("latin1")
+endcoding = 'latin1'
 
 
 upload_type= st.radio(
