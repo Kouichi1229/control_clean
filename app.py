@@ -5,7 +5,9 @@ from action import *
 from TAKE_OUT_TYPE import *
 import time
 from datetime import datetime
-
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stdin.reconfigure(encoding='utf-8')
 
 st.title('Pris 清洗程式工具 By IchiWang')
 now = datetime.now().strftime('%Y%m%d%H%M')
