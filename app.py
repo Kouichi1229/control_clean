@@ -13,7 +13,7 @@ st.title('Pris 清洗程式工具')
 st.subheader('By IchiWang')
 now = datetime.now().strftime('%Y%m%d%H%M')
 #.encode("latin1")
-endcoding = 'latin1'
+endcoding = 'utf-8-sig'
 
 
 upload_type= st.radio(
