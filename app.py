@@ -9,7 +9,8 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stdin.reconfigure(encoding='utf-8')
 
-st.title('Pris 清洗程式工具 By IchiWang')
+st.title('Pris 清洗程式工具')
+st..subheader('By IchiWang')
 now = datetime.now().strftime('%Y%m%d%H%M')
 
 endcoding = 'utf-8-sig'
@@ -47,7 +48,7 @@ if upload_type == 'Csv':
 
 
         #st.dataframe(df_count)
-        df[option_df]=df[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
+        df[option_df]=df[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8').decode("latin1")
 
         genre = st.radio(
         "逗號切割，留下逗號前的字串[0]",
