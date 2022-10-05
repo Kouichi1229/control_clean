@@ -2,8 +2,9 @@ import streamlit as st
 import pandas as pd
 from io import BytesIO
 from pyxlsb import open_workbook as open_xlsb
-#from strsimpy.jaro_winkler import JaroWinkler
-#from numba import jit
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stdin.reconfigure(encoding='utf-8')
 
 
 encoding='utf-8-sig'
