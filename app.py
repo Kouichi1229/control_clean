@@ -246,7 +246,7 @@ if upload_type == 'Csv':
                 st.download_button(
                     label="下載 CSV",
                     data=csv,
-                    file_name='權控清洗結果'+now+'.csv',
+                    file_name='Control_Clean_result'+now+'.csv',
                     mime='text/csv',
                     )
                 st.success('清洗完成，請下載')
@@ -487,7 +487,9 @@ else:
                 st.download_button(
                      label="下載 EXCEL",
                      data=excel,
-                     file_name='權控清洗結果'+now+'.xlsx'
+                     file_name='Control_Clean_result'+now+'.xlsx',
+                     mime="application/vnd.ms-excel"
+
                      )
 
                 st.success('清洗完成，請下載')
