@@ -39,28 +39,46 @@ if upload_type == 'Csv':
         time.sleep(2)
         st.write('你的清洗欄位', df[option_df])
 
+        count_assignee_value = st.radio(
+        "有無統計件數",
+            ('有', '無'))
+
+        if count_assignee_value == '有':
+            df_count=df[[option_df,'核准專利數']]
+            df_count=df.sort_values('核准專利數',ascending=False)
+            
+        else:
+            df_count=df.groupby([option_df],sort=False)[option_df].count()
+            df_count=df_count.to_frame(name='NUM')
+            df_count.to_csv('TEMP.csv',encoding=endcoding)
+            df_count=pd.read_csv('TEMP.csv',encoding=endcoding)
+            
+
         #將讀進來的資料統計
-        df_count=df.groupby([option_df],sort=False)[option_df].count()
-        df_count=df_count.to_frame(name='NUM')
-        df_count.to_csv('TEMP.csv',encoding=endcoding)
-        df_count=pd.read_csv('TEMP.csv',encoding=endcoding)
-        df_count=df_count.sort_values('NUM',ascending=False)
+        #df_count=df.groupby([option_df],sort=False)[option_df].count()
+        #df_count=df_count.to_frame(name='NUM')
+        #df_count.to_csv('TEMP.csv',encoding=endcoding)
+        #df_count=pd.read_csv('TEMP.csv',encoding=endcoding)
+        #df_count=df[[option_df,'核准專利數']]
+        #df_count=df.sort_values('核准專利數',ascending=False)
+        
 
 
         #st.dataframe(df_count)
-        df[option_df]=df[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
+        df[option_df]=df['Regex'].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
+        df_count[option_df]=df_count['Regex'].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
 
         genre = st.radio(
         "逗號切割，留下逗號前的字串[0]",
         ('YES', 'NO'))
 
         if genre == 'YES':
-            df['Regex']=df[option_df].astype(str).str.partition(',')[0]
-            df_count['Regex']=df_count[option_df].astype(str).str.partition(',')[0]
+            df['Regex']=df['Regex'].astype(str).str.partition(',')[0]
+            df_count['Regex']=df_count['Regex'].astype(str).str.partition(',')[0]
             
         else:
-            df['Regex']=df[option_df]
-            df_count['Regex']=df_count[option_df]
+            df['Regex']=df['Regex']
+            df_count['Regex']=df_count['Regex']
             
 
         st.write(df[[option_df,'Regex']])
@@ -241,7 +259,7 @@ if upload_type == 'Csv':
                 
 
                 df=df[[option_df,option_df+'_Clean']]
-                df.to_csv('CompareTemp.csv',encoding=encoding)
+                #df.to_csv('CompareTemp.csv',encoding=encoding)
                 csv =convert_df(df)
                 st.download_button(
                     label="下載 CSV",
@@ -262,17 +280,34 @@ else:
         '選擇要比對的欄位',
         (df.columns))
         time.sleep(2)
-        st.write('你的比對欄位', df[option_df])
+        st.write('你的清洗欄位', df[option_df])
+
+
+        count_assignee_value = st.radio(
+        "有無統計件數",
+            ('有', '無'))
+
+        if count_assignee_value == '有':
+            df_count=df[[option_df,'核准專利數']]
+            df_count=df.sort_values('核准專利數',ascending=False)
+        else:
+            df_count=df.groupby([option_df],sort=False)[option_df].count()
+            df_count=df_count.to_frame(name='NUM')
+            df_count.to_csv('TEMP.csv',encoding=endcoding)
+            df_count=pd.read_csv('TEMP.csv',encoding=endcoding)
 
         #將讀進來的資料統計
-        df_count=df.groupby([option_df],sort=False)[option_df].count()
-        df_count=df_count.to_frame(name='NUM')
-        df_count.to_csv('TEMP.csv',encoding=endcoding)
-        df_count=pd.read_csv('TEMP.csv',encoding=endcoding)
-        df_count=df_count.sort_values('NUM',ascending=False)
+        #df_count=df.groupby([option_df],sort=False)[option_df].count()
+        #df_count=df_count.to_frame(name='NUM')
+        #df_count.to_csv('TEMP.csv',encoding=endcoding)
+        #df_count=pd.read_csv('TEMP.csv',encoding=endcoding)
+        #df_count=df_count.sort_values('NUM',ascending=False)
 
-        df[option_df]=df[option_df].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
+        #df_count=df[[option_df,'核准專利數']]
+        #df_count=df.sort_values('核准專利數',ascending=False)
         
+        df['Regex']=df[option_df].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
+        df_count['Regex']=df_count[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
 
      
         genre = st.radio(
@@ -280,12 +315,12 @@ else:
         ('YES', 'NO'))
 
         if genre == 'YES':
-            df['Regex']=df[option_df].astype(str).str.partition(',')[0]
-            df_count['Regex']=df_count[option_df].astype(str).str.partition(',')[0]
+            df['Regex']=df['Regex'].astype(str).str.partition(',')[0]
+            df_count['Regex']=df_count['Regex'].astype(str).str.partition(',')[0]
             
         else:
-            df['Regex']=df[option_df]
-            df_count['Regex']=df_count[option_df]
+            df['Regex']=df['Regex']
+            df_count['Regex']=df_count['Regex']
             
 
         st.dataframe(df[[option_df,'Regex']])
@@ -482,7 +517,7 @@ else:
                 
                 
 
-                df.to_excel("CompareTemp.xlsx")
+                #df.to_excel("CompareTemp.xlsx")
                 excel =to_excel(df)
                 st.download_button(
                      label="下載 EXCEL",
