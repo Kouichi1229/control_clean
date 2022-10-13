@@ -44,8 +44,11 @@ if upload_type == 'Csv':
             ('有', '無'))
 
         if count_assignee_value == '有':
-            df_count=df[[option_df,'核准專利數']]
-            df_count=df.sort_values('核准專利數',ascending=False)
+            option_df2 = st.selectbox(
+                    '選擇要清洗的欄位',
+                    (df.columns))
+            df_count=df[[option_df,option_df2]]
+            df_count=df.sort_values(option_df2,ascending=False)
             
         else:
             df_count=df.groupby([option_df],sort=False)[option_df].count()
@@ -286,8 +289,15 @@ else:
         count_assignee_value = st.radio(
         "有無統計件數",
             ('有', '無'))
-
+     
         if count_assignee_value == '有':
+            option_df2 = st.selectbox(
+                    '選擇要清洗的欄位',
+                    (df.columns))
+            df_count=df[[option_df,option_df2]]
+            df_count=df.sort_values(option_df2,ascending=False)
+        if count_assignee_value == '有':
+               
             df_count=df[[option_df,'核准專利數']]
             df_count=df.sort_values('核准專利數',ascending=False)
         else:
