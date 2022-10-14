@@ -12,7 +12,7 @@ LLC=['PLLC','LLC','L.L.C.','PLC.','PLC','HF.','OYJ','A.E.','NYRT.','S/A',
 'P/S','SAE','SASU','EURL','AE','CPT','AS','AB','ASA','OOO','DAT','VAT',
 'ZAT','MCHJ','A.D.','A.B.','AKTIEBOLAG']
 
-LIMITED=['PTY. LTD.','PTY LTD','LTD','L.T.D.','LTD.','BVBA','D.O.O.','LTDA',
+LIMITED=['PTY. LTD.','PTY LTD','LTD','L.T.D.','LTD.','BVBA','D.O.O.','LTDA','LMT.',
  'GMBH','G.M.B.H','KFT.','KHT.','ZRT.','EHF.','S.A.R.L.','D.O.O.E.L.','S.','DE','R.L.',
  'B.V.','TAPUI','SP.','Z O.O.','Z.O.O.','S.R.L.','S.L.','S,R.L.','S.L.N.E.','OOD','OY',
  'RT.','TEO','UAB','SCS','SPRL','LIMITED','BHD.','SDN. BHD.',
