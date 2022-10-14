@@ -23,12 +23,13 @@ LLLP=['LLLP', 'L.L.L.P.']
 LLP=['LLP', 'L.L.P.', 'SP.P.', 'S.C.A.', 'S.C.S.']
 
 LP=['GMBH','&','CO.','KG','LP','L.P.',
- 'S.C.S.','S.C.P.A','COMM.V',
- 'K.D.','K.D.A.','S.','EN','C.',
+ 'S.C.S.','S.C.P.A','COMM.V','MIT','BESCHRANKTER',
+ 'K.D.','K.D.A.','S.','EN','C.','HAFTUNG'
  'E.E.','S.A.S.','C.V.','S.K.A.',
  'SP.K.','S.CRA.','KY','SCS','KG',
  'KD','K/S','EE','SECS','KDA','KS',
- 'KB','KT','MIT',' BESCHRAENKTER','HAFTUNG','BESCHRÄNKTER','GESELLSCHAFT','M.B.H.']
+ 'KB','KT','MIT',' BESCHRAENKTER','HAFTUNG',
+ 'BESCHRÄNKTER','GESELLSCHAFT','M.B.H.']
 
 PTE=['PRIVATE', 'PTE', 'XK']
 
