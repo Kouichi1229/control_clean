@@ -10,7 +10,7 @@ LLC=['PLLC','LLC','L.L.C.','PLC.','PLC','HF.','OYJ','A.E.','NYRT.','S/A',
 'P.L.C.','SH.A.','S.A.','S.R.L.','SRL.','SRL','AAT','3AT','D.D.',
 'S.R.O.','SPOL.','S R.O.','S.M.B.A.','SMBA','SARL','NV','SA','APS','A/S',
 'P/S','SAE','SASU','EURL','AE','CPT','AS','AB','ASA','OOO','DAT','VAT',
-'ZAT','MCHJ','A.D.']
+'ZAT','MCHJ','A.D.','A.B.']
 
 LIMITED=['PTY. LTD.','PTY LTD','LTD','L.T.D.','LTD.','BVBA','D.O.O.','LTDA',
  'GMBH','G.M.B.H','KFT.','KHT.','ZRT.','EHF.','S.A.R.L.','D.O.O.E.L.','S.','DE','R.L.',
