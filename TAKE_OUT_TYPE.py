@@ -22,7 +22,7 @@ LLLP=['LLLP', 'L.L.L.P.']
 
 LLP=['LLP', 'L.L.P.', 'SP.P.', 'S.C.A.', 'S.C.S.']
 
-LP=['GMBH','&','CO.','KG','LP','L.P.',
+LP=['GMBH','&','CO.','KG','LP','L.P.','KOMMANDITGESELLSCHAFT'
  'S.C.S.','S.C.P.A','COMM.V','MIT','BESCHRANKTER',
  'K.D.','K.D.A.','S.','EN','C.','HAFTUNG','K.G.'
  'E.E.','S.A.S.','C.V.','S.K.A.',
