@@ -258,7 +258,7 @@ if upload_type == 'Csv':
                 time.sleep(1)
                 
 
-                df=df[[option_df,option_df+'_Clean']]
+                #df=df[[option_df,option_df+'_Clean']]
                 #df.to_csv('CompareTemp.csv',encoding=encoding)
                 csv =convert_df(df)
                 st.download_button(
