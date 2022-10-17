@@ -65,8 +65,8 @@ if upload_type == 'Csv':
 
 
         #st.dataframe(df_count)
-        df[option_df]=df['Regex'].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
-        df_count[option_df]=df_count['Regex'].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
+        df['Regex']=df[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
+        df_count['Regex']=df_count[option_df].astype(str).str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(endcoding)
 
         genre = st.radio(
         "逗號切割，留下逗號前的字串[0]",
